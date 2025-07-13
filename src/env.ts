@@ -4,7 +4,12 @@ import { z } from 'zod/v4';
 import logger from './logger.js';
 
 const envSchema = z.object({
-  PORT: z.coerce.number().default(3000)
+  PORT: z.coerce.number().default(3000),
+  DB_HOST: z.coerce.string(),
+  DB_PORT: z.coerce.number(),
+  DB_USER: z.coerce.string(),
+  DB_PASSW: z.coerce.string(),
+  DB_DATABASE: z.coerce.string()
 });
 
 try {

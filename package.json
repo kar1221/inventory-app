@@ -8,7 +8,8 @@
     "dev": "npx tsx --watch src/index.ts",
     "build": "tsc",
     "test": "vitest run",
-    "start": "node dist/src/index.js"
+    "start": "node dist/src/index.js",
+    "db:populate": "npx tsx src/db/populateDB.ts"
   },
   "keywords": [],
   "author": "",
@@ -17,8 +18,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^17.1.0",
+    "ejs": "^3.1.10",
     "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
     "helmet": "^8.1.0",
+    "pg": "^8.16.3",
     "winston": "^3.17.0",
     "zod": "^3.25.76"
   },
@@ -28,7 +32,9 @@
     "@stylistic/eslint-plugin": "^3.1.0",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/express-ejs-layouts": "^2.5.4",
     "@types/node": "^24.0.12",
+    "@types/pg": "^8.15.4",
     "eslint": "^9.30.1",
     "eslint-config-airbnb-extended": "^2.1.2",
     "eslint-config-prettier": "^10.1.5",
